@@ -1,0 +1,25 @@
+.TodoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    border-bottom: 1px solid grey;
+}
+
+.TodoRow-header {
+    font-weight: bold;
+}
+
+.TodoRow-header--striked {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.TodoRow-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.TodoRow-wrapper-checkbox {
+
+}

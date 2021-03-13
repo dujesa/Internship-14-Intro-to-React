@@ -1,0 +1,12 @@
+.PriorityBadge {
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    text-transform: lowercase;
+    padding: 2px;
+    height: fit-content;
+}
+
+.PriorityBadge::first-letter {
+    text-transform: uppercase;
+}

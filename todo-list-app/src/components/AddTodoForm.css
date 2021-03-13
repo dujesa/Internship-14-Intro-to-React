@@ -1,0 +1,34 @@
+.AddTodoForm {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 15px auto;
+}
+
+.AddTodoForm > * {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.AddTodoForm:first-child {
+    margin-top: 0;
+}
+
+.AddTodoForm-input {
+    color: lightgray;
+}
+
+.AddTodoForm-option {
+    color: black;
+    text-transform: lowercase;
+}
+
+.AddTodoForm-option::first-letter {
+    text-transform: uppercase;
+}
+
+.AddTodoForm-button {
+    color: white;
+    background-color: darkred;
+    font-size: large;
+}

@@ -1,3 +1,4 @@
+import "./TodoRow.css";
 import PriorityBadge from "./PriorityBadge";
 
 const TodoRow = (props) => {
@@ -7,10 +8,21 @@ const TodoRow = (props) => {
   };
 
   return (
-    <li>
-      <h3>{name}</h3>
-      <PriorityBadge priority={priority} />
-      <input type="checkbox" checked={isDone} onChange={handleStatusChange} />
+    <li className="TodoRow">
+      <h3
+        className={!isDone ? "TodoRow-heaider" : "TodoRow-header--striked"}
+      >
+        {name}
+      </h3>
+      <div className="TodoRow-wrapper">
+        <PriorityBadge priority={priority} />
+        <input
+          type="checkbox"
+          checked={isDone}
+          onChange={handleStatusChange}
+          className="TodoRow-wrapper-checkbox"
+        />
+      </div>
     </li>
   );
 };

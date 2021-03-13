@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -26,6 +29,26 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 10px;
+  border-radius: 5px;
+  background-color:lightgray;
+}
+
+.App-card-header {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color:darkred;
+  font-size: medium;
+  font-weight: bolder;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 @keyframes App-logo-spin {

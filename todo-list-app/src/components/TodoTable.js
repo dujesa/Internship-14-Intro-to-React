@@ -1,3 +1,4 @@
+import "./TodoTable.css";
 import TodoRow from "./TodoRow";
 
 const TodoTable = (props) => {
@@ -7,9 +8,9 @@ const TodoTable = (props) => {
   ));
 
   return (
-    <div>
-      <h2>Todos</h2>
-      <ul>{todoListItems}</ul>
+    <div className="App-card TodoTable">
+      <h2 className="App-card-header">Todos</h2>
+      <ul className="TodoTable-list">{todoListItems}</ul>
     </div>
   );
 };
