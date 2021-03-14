@@ -4,7 +4,7 @@ import TodoRow from "./TodoRow";
 const TodoTable = (props) => {
   const todos = props.todos;
   const todoListItems = todos.map((todo) => (
-    <TodoRow key={todo.toString()} todo={todo} />
+    <TodoRow key={todo.name} todo={todo} />
   ));
 
   return (

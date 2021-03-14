@@ -6,13 +6,7 @@ import TodoTable from "./components/TodoTable";
 import priorityType from "./enums/priorityType";
 
 function App() {
-  const [state, setState] = useState(0);
-
-  const handleAddItemClick = () => {
-    setState((prevState) => prevState + 1);
-  };
-
-  const todos = [
+  const [todos, setTodos] = useState([
     {
       name: "Zadatak 1",
       priority: priorityType.LOW,
@@ -33,19 +27,20 @@ function App() {
       priority: priorityType.LOW,
       isDone: false,
     },
-  ];
+  ]);
+
+  const addTodo = (newTodo) => {
+    setTodos((oldTodos) => [...oldTodos, newTodo]);
+
+    console.log(todos);
+  };
 
   return (
     <div className="App">
-      <AddTodoCard />
+      <AddTodoCard addTodo={addTodo} />
       <TodoTable todos={todos} />
     </div>
   );
-  /*
-  <h1>{state === 0 ? "No items" : `Number of todos: ${state}`}</h1>
-      <button onClick={handleAddItemClick}>Add todo</button>
-    
-  */
 }
 
 export default App;

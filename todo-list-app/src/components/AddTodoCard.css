@@ -1,3 +1,7 @@
 .AddTodoCard {
     width: 300px;
 }
+
+.App-card-error {
+    color: red;
+}
