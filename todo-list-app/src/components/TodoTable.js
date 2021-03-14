@@ -1,10 +1,11 @@
+import { useState } from "react";
+
 import "./TodoTable.css";
 import TodoRow from "./TodoRow";
 
-const TodoTable = (props) => {
-  const todos = props.todos;
-  const todoListItems = todos.map((todo) => (
-    <TodoRow key={todo.name} todo={todo} />
+const TodoTable = ({ todos, setTodos }) => {
+  const todoListItems = todos.map((todo, index) => (
+    <TodoRow key={index} index={index} todo={todo} setTodos={setTodos} />
   ));
 
   return (

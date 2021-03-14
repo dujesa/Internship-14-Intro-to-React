@@ -31,14 +31,12 @@ function App() {
 
   const addTodo = (newTodo) => {
     setTodos((oldTodos) => [...oldTodos, newTodo]);
-
-    console.log(todos);
   };
 
   return (
     <div className="App">
       <AddTodoCard addTodo={addTodo} />
-      <TodoTable todos={todos} />
+      <TodoTable todos={todos} setTodos={setTodos} />
     </div>
   );
 }
