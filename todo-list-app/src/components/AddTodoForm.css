@@ -15,6 +15,10 @@
 }
 
 .AddTodoForm-input {
+    color: black;
+}
+
+.AddTodoForm-input--empty {
     color: lightgray;
 }
 

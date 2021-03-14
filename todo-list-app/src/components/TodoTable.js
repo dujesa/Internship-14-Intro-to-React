@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./TodoTable.css";
 import TodoRow from "./TodoRow";
 

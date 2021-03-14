@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./AddTodoCard.css";
 import AddTodoForm from "./AddTodoForm";
-import priorityType from "./../enums/priorityType";
+import { priorityType } from "./../enums/constants";
 
 const AddTodoCard = ({ addTodo }) => {
   const [todoForm, setTodoFormState] = useState({

@@ -1,5 +1,5 @@
 import "./AddTodoForm.css";
-import priorityType from "../enums/priorityType";
+import { priorityType } from "../enums/constants";
 
 const AddTodoForm = ({ todo, setTodoFormState, submitTodoFormHandler }) => {
   const priorities = Object.values(priorityType);
@@ -29,7 +29,7 @@ const AddTodoForm = ({ todo, setTodoFormState, submitTodoFormHandler }) => {
         name="description"
         placeholder="Description"
         onChange={handleChange}
-        className="AddTodoForm-input"
+        className={`${todo.description !== "" ? "AddTodoForm-input" : "AddTodoForm-input--empty"}`}
       />
       <select value={todo.priority} name="priority" onChange={handleChange}>
         {priorityOptions}
